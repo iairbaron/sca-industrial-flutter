@@ -1,0 +1,8 @@
+
+linter:
+
+  rules:
+
+analyzer:
+  errors:
+   undefined_prefixed_name: ignore
