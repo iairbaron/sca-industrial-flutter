@@ -6,27 +6,24 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 
 import 'nav_bar_button.dart';
 
-
-
 class NavBar extends ResponsiveWidget {
   const NavBar({super.key});
 
   @override
   Widget buildDesktop(BuildContext context) {
-    return  DekstopNavBar();
+    return DekstopNavBar();
   }
+
   @override
   Widget buildMobile(BuildContext context) {
     return MobileNavBar();
   }
-
 
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
 class DekstopNavBar extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
@@ -41,15 +38,19 @@ class DekstopNavBar extends StatelessWidget {
             ),
             const SizedBox(width: 10.0),
             Expanded(child: Container()),
-           Row(
+            Row(
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/");
+                  },
                   child: const Text("Home"),
                 ),
                 const SizedBox(width: 10), // Espacio horizontal de 10 píxeles
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/contact");
+                  },
                   child: const Text("contact"),
                 ),
                 const SizedBox(width: 10), // Espacio horizontal de 10 píxeles
@@ -59,7 +60,6 @@ class DekstopNavBar extends StatelessWidget {
                 ),
               ],
             )
-            
           ],
         ),
       ),
@@ -70,41 +70,39 @@ class DekstopNavBar extends StatelessWidget {
 //---------------- MOBILE NAVBAR
 
 class MobileNavBar extends HookConsumerWidget {
-    
-
-
   @override
-  Widget build(BuildContext context, WidgetRef ref) {final containerHeight = useState<double>(0.0);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final containerHeight = useState<double>(0.0);
     return Stack(
       children: [
         AnimatedContainer(
           margin: const EdgeInsets.only(top: 70.0),
           duration: const Duration(milliseconds: 350),
           curve: Curves.ease,
-          height: containerHeight.value ,
+          height: containerHeight.value,
           child: SingleChildScrollView(
             child: Column(
               children: [
-                 NavBarButton(
+                NavBarButton(
                   text: "Home",
                   onTap: () {
+                    Navigator.pushNamed(context, "/");
                     containerHeight.value = 0;
                   },
                 ),
-                 NavBarButton(
+                NavBarButton(
                   text: "Contact",
                   onTap: () {
+                    Navigator.pushNamed(context, "/contact");
                     containerHeight.value = 0;
                   },
                 ),
-                 NavBarButton(
+                NavBarButton(
                   text: "Servicios",
                   onTap: () {
                     containerHeight.value = 0;
                   },
                 ),
-                 
-              
               ], // children
             ),
           ),
@@ -119,19 +117,18 @@ class MobileNavBar extends HookConsumerWidget {
                   height: 40.0,
                 ),
                 const SizedBox(width: 10.0),
-                Expanded(
-                  child: Container()),
-                  Material(
+                Expanded(child: Container()),
+                Material(
                   child: InkWell(
-                  splashColor: Colors.white60,
-                  onTap: () {
-                  final height = containerHeight.value > 0 ? 0.0 : 240.0;
+                    splashColor: Colors.white60,
+                    onTap: () {
+                      final height = containerHeight.value > 0 ? 0.0 : 240.0;
                       containerHeight.value = height;
                     },
                     child: Icon(
                       Icons.menu,
                       color: Colors.black54,
-                     ),
+                    ),
                   ),
                 )
               ],
@@ -141,4 +138,4 @@ class MobileNavBar extends HookConsumerWidget {
       ],
     );
   }
-  }
+}

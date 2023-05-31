@@ -26,66 +26,65 @@ class DesktopContactContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    return Container(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              width: width * .3,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("CONTACTO",
-                  style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold, color: Colors.blue) ),
-                  const SizedBox(height: 30),
-                  TextField(
-                    decoration: const InputDecoration(
-                      hintText: "Nombre ",
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 24),
+      child: Container(
+        color: Colors.blue,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 24),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                width: width * .3,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text("CONTACTO",
+                    style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold, color: Colors.white) ),
+                    const SizedBox(height: 30),
+                    TextField(
+                      decoration: const InputDecoration(
+                        hintText: "Nombre ",
+                      ),
                     ),
-                  ),
-                  TextField(
-                    decoration: const InputDecoration(
-                      hintText: "Nombre ",
+                    TextField(
+                      decoration: const InputDecoration(
+                        hintText: "Apellido ",
+                      ),
                     ),
-                  ),
-                  TextField(
-                    decoration: const InputDecoration(
-                      hintText: "Apellido ",
+                    TextField(
+                      decoration: const InputDecoration(
+                        hintText: "Mail ",
+                      ),
                     ),
-                  ),
-                  TextField(
-                    decoration: const InputDecoration(
-                      hintText: "Mail ",
+                    TextField(
+                      decoration: const InputDecoration(
+                        hintText: "Telefono ",
+                      ),
                     ),
-                  ),
-                  TextField(
-                    decoration: const InputDecoration(
-                      hintText: "Telefono ",
+                    TextField(
+                      decoration: const InputDecoration(
+                        hintText: "Comentairo",
+                      ),
                     ),
-                  ),
-                  TextField(
-                    decoration: const InputDecoration(
-                      hintText: "Comentairo",
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton(
-                        onPressed: () {}, child: const Text("Enviar")),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ElevatedButton(
+                          onPressed: () {}, child: const Text("Enviar")),
+                    )
+                  ],
+                ),
               ),
-            ),
-            SizedBox(width: 10),
-            Container(
-              height: 400,
-              width: 400,
-              child: HtmlElementView(viewType: 'google-maps'),
-            ),
-          ],
+              SizedBox(),
+              Container(
+                height: 400,
+                width: 400,
+                child: HtmlElementView(viewType: 'google-maps'),
+              ),
+            ],
+          ),
         ),
       ),
     );

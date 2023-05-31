@@ -1,19 +1,26 @@
+import 'package:basic_landing_webpage/src/content/contact_web.dart';
 import 'package:basic_landing_webpage/src/my_web_page.dart';
 import 'package:flutter/material.dart';
 
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:url_strategy/url_strategy.dart';
+//Importaciones de firebase
+// ignore: unused_import
 
-void main() {
-  // Here we set the URL strategy for our web app.
-  // It is safe to call this function when running on mobile or desktop as well.
-  setPathUrlStrategy();
-  runApp(
-    ProviderScope(
-    child: MaterialApp(
-    title: "Basic Landing Page",
-    home: MyWebPage()    
-  )),
+void main() async {
+  runApp(const MyApp());
+}
 
-  );
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Firestore Demo',
+      initialRoute: "/",
+      routes: {
+        "/": (context) =>  MyWebPage(),
+        "/contact": (context) =>  ContactWeb(),
+      },
+    );
+  }
 }

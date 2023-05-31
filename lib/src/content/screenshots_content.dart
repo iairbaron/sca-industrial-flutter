@@ -15,7 +15,6 @@ class ScreenshotsContent extends ResponsiveWidget {
 class ScreenshotsContentMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double imageWidth = MediaQuery.of(context).size.width * 0.8;
 
     return Container(
       color: Colors.blue,
