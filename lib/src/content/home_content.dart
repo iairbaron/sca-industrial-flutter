@@ -32,15 +32,17 @@ class HomeContent extends StatelessWidget {
                     child:Image.asset(
                       "images/logoSca.png",
                     ),
+                  
+                    
                     // child: const Text(
-                    //   "S.C.A INDUSTRIAL S.A.",
+                    //   "Somos una empresa de ingeniería líder, enfocada en la innovación, líneas de proceso y diseño de equipos.Durante más de 27 años, hemos entregado maquinaria de alta tecnología para dos industrias claves: productos lácteos y bebidas.Diseñamos cada equipo movidos por nuestra búsqueda de entregar los más altos estándares de calidad en la industria.Desde la selección de componentes hasta el diseño y ensamblaje de procesos, brindamos un servicio completo, soporte técnico y equipos de última generación.",
                     //   style: TextStyle(
-                    //     fontWeight: FontWeight.bold,  
-                    //     fontSize: 40,
+                    //     // fontWeight: FontWeight.bold,  
+                    //     fontSize:20 ,
                     //     color: Colors.white,
-                       
+                    //     backgroundColor: Colors.blueGrey     
                     //   ),
-                    // ),
+                  
                   ),
                   const SizedBox(height: 10),
                   const SizedBox(height: 24),

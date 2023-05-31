@@ -38,14 +38,15 @@ class FeaturesContentResponsive extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              "Features Section",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+              "S.C.A INDUSTRIAL S.A. ",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40, color: Colors.white),
             ),
             SizedBox(height: 24),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
               child: Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                'Somos una empresa de ingeniería líder, enfocada en la innovación, líneas de proceso y diseño de equipos.Durante más de 27 años, hemos entregado maquinaria de alta tecnología para dos industrias claves: productos lácteos y bebidas.Diseñamos cada equipo movidos por nuestra búsqueda de entregar los más altos estándares de calidad en la industria.Desde la selección de componentes hasta el diseño y ensamblaje de procesos, brindamos un servicio completo, soporte técnico y equipos de última generació',
+                style: TextStyle(color: Colors.white, fontSize: 15),
               ),
             ),
             SizedBox(height: 24),

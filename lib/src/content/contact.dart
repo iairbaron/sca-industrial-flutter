@@ -33,7 +33,6 @@ class DesktopContactContent extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              
               width: width * .3,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -41,7 +40,7 @@ class DesktopContactContent extends StatelessWidget {
                 children: [
                   Text("CONTACTO",
                   style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold, color: Colors.blue) ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 30),
                   TextField(
                     decoration: const InputDecoration(
                       hintText: "Nombre ",
@@ -49,12 +48,27 @@ class DesktopContactContent extends StatelessWidget {
                   ),
                   TextField(
                     decoration: const InputDecoration(
-                      hintText: "Apellido",
+                      hintText: "Nombre ",
                     ),
                   ),
-                   TextField(
+                  TextField(
                     decoration: const InputDecoration(
-                      hintText: "Comentario",
+                      hintText: "Apellido ",
+                    ),
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                      hintText: "Mail ",
+                    ),
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                      hintText: "Telefono ",
+                    ),
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                      hintText: "Comentairo",
                     ),
                   ),
                   Padding(
@@ -87,11 +101,32 @@ class MobileContactContent extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            TextField(
+             TextField(
               decoration: const InputDecoration(
-                hintText: "Ingrese el nuevo nombre ",
+                hintText: "Nombre ",
               ),
             ),
+              TextField(
+              decoration: const InputDecoration(
+                hintText: "Apellido ",
+              ),
+            ),
+              TextField(
+              decoration: const InputDecoration(
+                hintText: "Mail ",
+              ),
+            ),
+             TextField(
+              decoration: const InputDecoration(
+                hintText: "Telefono ",
+              ),
+            ),
+             TextField(
+              decoration: const InputDecoration(
+                hintText: "Comentairo",
+              ),
+            ),
+            
             Padding(
               padding: const EdgeInsets.all(8.0),
               child:
