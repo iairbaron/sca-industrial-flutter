@@ -37,7 +37,7 @@ class DekstopNavBar extends StatelessWidget {
           children: <Widget>[
             Image.asset(
               "images/logoSca.png",
-              height: 40.0,
+              height: 70.0,
             ),
             const SizedBox(width: 10.0),
             Expanded(child: Container()),
@@ -115,7 +115,7 @@ class MobileNavBar extends HookConsumerWidget {
             child: Row(
               children: <Widget>[
                 Image.asset(
-                  "assets/images/logo.png",
+                  "assets/images/logoSca.png",
                   height: 40.0,
                 ),
                 const SizedBox(width: 10.0),

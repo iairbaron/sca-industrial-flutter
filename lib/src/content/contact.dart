@@ -101,6 +101,11 @@ class MobileContactContent extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Text("CONTACTO",
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue)),
              TextField(
               decoration: const InputDecoration(
                 hintText: "Nombre ",
@@ -128,10 +133,20 @@ class MobileContactContent extends StatelessWidget {
             ),
             
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(5.0),
               child:
                   ElevatedButton(onPressed: () {}, child: const Text("Enviar")),
-            )
+            ),
+            SizedBox(width: 10, height: 30,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 350,
+                width: 350,
+                child: HtmlElementView( viewType: 'google-maps'),
+              ),
+            ),
+            
           ],
         ),
       ),

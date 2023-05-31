@@ -48,12 +48,9 @@ class ScreenshotsContentMobile extends StatelessWidget {
                 children: [
                   _Image(
                       image: "images/screenshots/descarga.jpg",
-                      width: imageWidth),
+                      width: 200),
                   _Image(
-                      image: "images/screenshots/561.jpg", width: imageWidth),
-                  _Image(
-                      image: "images/screenshots/descarga.jpg",
-                      width: imageWidth),
+                      image: "images/screenshots/561.jpg", width: 200),
                 ],
               ),
             ),
