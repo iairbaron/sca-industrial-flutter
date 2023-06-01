@@ -1,13 +1,14 @@
-import 'package:basic_landing_webpage/src/content/footer.dart';
+import 'package:basic_landing_webpage/src/footer.dart';
 import 'package:basic_landing_webpage/src/navigation_bar/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'contact.dart';
+import 'content/calibraciones.dart';
+
 
 final scrolledProvider = StateProvider<bool>((_) => false);
 
-class ContactWeb extends StatelessWidget {
+class ServiceWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -23,7 +24,7 @@ class ContactWeb extends StatelessWidget {
               Expanded(
                   child: SingleChildScrollView(
                       child: Column(children: <Widget>[
-                ContactContent(),
+                ServiceContent(),
                 FooterWeb()
                 // VideoPlayerApp(),
                 //  FeaturesContent(),

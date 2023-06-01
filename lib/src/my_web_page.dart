@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 
 import 'content/features_ontent.dart';
-import 'content/footer.dart';
+import 'footer.dart';
 import 'content/home_content.dart';
 import 'content/screenshots_content.dart';
 

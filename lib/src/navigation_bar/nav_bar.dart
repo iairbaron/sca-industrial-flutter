@@ -55,7 +55,9 @@ class DekstopNavBar extends StatelessWidget {
                 ),
                 const SizedBox(width: 10), // Espacio horizontal de 10 píxeles
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/servicios");
+                  },
                   child: const Text("Servicios"),
                 ),
               ],
@@ -100,6 +102,7 @@ class MobileNavBar extends HookConsumerWidget {
                 NavBarButton(
                   text: "Servicios",
                   onTap: () {
+                     Navigator.pushNamed(context, "/servicios");
                     containerHeight.value = 0;
                   },
                 ),

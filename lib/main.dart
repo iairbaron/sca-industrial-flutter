@@ -1,4 +1,6 @@
-import 'package:basic_landing_webpage/src/content/contact_web.dart';
+import 'package:basic_landing_webpage/src/contact_web.dart';
+import 'package:basic_landing_webpage/src/content/video_player_screen.dart';
+import 'package:basic_landing_webpage/src/service_web.dart';
 import 'package:basic_landing_webpage/src/my_web_page.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +22,9 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) =>  MyWebPage(),
         "/contact": (context) =>  ContactWeb(),
+        "/servicios": (context) => ServiceWeb(),
+        "/video": (context) => VideoPlayerApp(),
+
       },
     );
   }
